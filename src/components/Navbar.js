@@ -16,15 +16,15 @@ const Navbar = (props) => {
         </Link>
 
         <nav>
-            <ul className='text-richblack-100 flex gap-x-6'>
+            <ul className='text-richblack-100 flex gap-x-6 '>
                 <li>
-                    <Link to="/">Home</Link>
+                    <Link to="/" className='hover:text-cyan-500'>Home</Link>
                 </li>
                 <li>
-                    <Link to="/about">About</Link>
+                    <Link to="/about" className='hover:text-cyan-500'>About</Link>
                 </li>
                 <li>
-                    <Link to="/contact">Contact</Link>
+                    <Link to="/contact" className='hover:text-cyan-500'>Contact</Link>
                 </li>
             </ul>
         </nav>
