@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-hot-toast';
-import { GoogleLogin,GoogleOAuthProvider } from '@react-oauth/google';
 
 
 const LoginForm = ({ setIsLoggedIn }) => {
@@ -13,14 +12,7 @@ const LoginForm = ({ setIsLoggedIn }) => {
         email: "", password: ""
     })
 
-    const handleSuccess = (response) => {
-        console.log('Login Success: currentUser:', response);
-        // You can save the user info to your state or context if needed
-      };
-    
-      const handleFailure = (error) => {
-        console.error('Login Failed:', error);
-      };
+   
 
     const [showPassword, setShowPassword] = useState(false);
 
@@ -97,12 +89,7 @@ const LoginForm = ({ setIsLoggedIn }) => {
             <button className='bg-yellow-50 rounded-[8px] font-medium text-richblack-900 px-[12px] py-[8px] mt-6'>
                 Sign In
             </button>
-            <GoogleOAuthProvider clientId="61436384335-cn87oq5qp5u9s1gcreebo50vc7ujqqaq.apps.googleusercontent.com">
-                <GoogleLogin
-                    onSuccess={handleSuccess}
-                    onFailure={handleFailure}
-                />
-            </GoogleOAuthProvider>
+            
 
         </form>
     )
